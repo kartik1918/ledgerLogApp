@@ -73,7 +73,6 @@ const formatMovementDate = function (date, locale) {
     Math.round(Math.abs(date2 - date1) / (1000 * 60 * 60 * 24));
 
   const daysPassed = calcDaysPassed(new Date(), date);
-  console.log(daysPassed);
 
   if (daysPassed === 0) return "Today";
   if (daysPassed === 1) return "Yesterday";
@@ -154,7 +153,6 @@ const createUsernames = function (accs) {
   });
 };
 const userNames = createUsernames(accounts);
-console.log(userNames);
 
 const updateUI = function (acc) {
   // Display movements
@@ -207,7 +205,7 @@ btnLogin.addEventListener("click", function (e) {
   currentAccount = accounts.find(
     (acc) => acc.username === inputLoginUsername.value
   );
-  console.log(currentAccount);
+  console.log('These are dummy values');
 
   if (currentAccount?.pin === +inputLoginPin.value) {
     // Display UI and message
@@ -312,7 +310,6 @@ btnClose.addEventListener("click", function (e) {
     const index = accounts.findIndex(
       (acc) => acc.username === currentAccount.username
     );
-    console.log(index);
 
     // Delete account
     accounts.splice(index, 1);
@@ -330,3 +327,7 @@ btnSort.addEventListener("click", function (e) {
   displayMovements(currentAccount.movements, !sorted);
   sorted = !sorted;
 });
+
+console.log('Use either of below credentials to login :D');
+console.dir('username: kg, password: 1111');
+console.dir('username: vj, password: 2222');
