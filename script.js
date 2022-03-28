@@ -1,7 +1,7 @@
 "use strict";
 
 const account1 = {
-  owner: "Kartik Gupta",
+  owner: "Rachit Khandelwal",
   movements: [200, 455.23, -306.5, 25000, -642.21, -133.9, 79.97, 1300],
   interestRate: 1.2, // %
   pin: 1111,
@@ -67,6 +67,8 @@ const inputTransferAmount = document.querySelector(".form__input--amount");
 const inputLoanAmount = document.querySelector(".form__input--loan-amount");
 const inputCloseUsername = document.querySelector(".form__input--user");
 const inputClosePin = document.querySelector(".form__input--pin");
+
+const consoleMsg = document.getElementById('demo-live');
 
 const formatMovementDate = function (date, locale) {
   const calcDaysPassed = (date1, date2) =>
@@ -224,6 +226,8 @@ btnLogin.addEventListener("click", function (e) {
       year: "numeric",
     };
 
+    consoleMsg.textContent = 'These are dummy values.'
+
     labelDate.textContent = new Intl.DateTimeFormat(
       currentAccount.locale,
       options
@@ -329,5 +333,5 @@ btnSort.addEventListener("click", function (e) {
 });
 
 console.log('Use either of below credentials to login :D');
-console.dir('username: kg, password: 1111');
+console.dir('username: rk, password: 1111');
 console.dir('username: vj, password: 2222');
