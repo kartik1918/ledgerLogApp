@@ -333,5 +333,5 @@ btnSort.addEventListener("click", function (e) {
 });
 
 console.log('Use either of below credentials to login :D');
-console.dir('username: rk, password: 1111');
-console.dir('username: vj, password: 2222');
+console.dir('username: rk, password: 1111')
+console.dir('username: vj, password: 2222')
